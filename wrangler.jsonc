@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "number-link-system",
+  "main": "./worker/index.js",
+  "compatibility_date": "2026-08-31",
+  "workers_dev": true,
+  "routes": [],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "number-link-db",
+      "database_id": "YOUR_D1_DATABASE_ID",
+      "migrations_dir": "./worker/migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
